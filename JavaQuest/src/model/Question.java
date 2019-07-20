@@ -7,28 +7,23 @@ public abstract class Question implements Serializable {
 	private int chapter;
 	private int questionNumber;
 	private String questionText;
-	private String correctAnswerText;
-	private int userAnswer; //-1 not answered
-	private int correctAnswer;
+	private int userAnswer; //-1 not answered	
 	private int wasUserAnswerCorrect; // -1 not answered, 0 wrong, 1 correct
 	
 	public Question() {
 		this.chapter = 0;
 		this.questionNumber = 0;
 		this.questionText = "";
-		this.correctAnswerText = "";
 		this.userAnswer = -1;
-		this.correctAnswer = -1;
 		this.wasUserAnswerCorrect = -1;
 	}
 	
-	public Question(int chapter, int questionNumber, String questionText, String correctAnswerText, int correctAnswer) {
-		this.questionText = questionText;
-		this.correctAnswerText = correctAnswerText;
-		this.correctAnswer = correctAnswer;
+	public Question(int chapter, int questionNumber, String questionText, int userAnswer, int wasUserAnswerCorrect) {
 		this.chapter = chapter;
 		this.questionNumber = questionNumber;
-		this.wasUserAnswerCorrect = -1;
+		this.questionText = questionText;
+		this.userAnswer = userAnswer;
+		this.wasUserAnswerCorrect = wasUserAnswerCorrect;
 	}
 	
 	public int getChapter() {
@@ -41,10 +36,6 @@ public abstract class Question implements Serializable {
 	
 	public String getQuestionText() {
 		return this.questionText;
-	}
-	
-	public String getCorrectAnswer() {
-		return this.correctAnswerText;
 	}
 	
 	public int getUserAnswer() {
@@ -63,12 +54,12 @@ public abstract class Question implements Serializable {
 		this.wasUserAnswerCorrect = wasUserAnswerCorrect;
 	}
 	
+	public abstract int getCorrectAnswer();
 	
-	public boolean checkAnswer() {
-		if(this.userAnswer == this.correctAnswer) {
-			return true;
-		} else return false;
-		
+	public abstract boolean checkAnswer(int userInput);
+	
+	public String correctAnswer() {
+		return "Correct answer is: " + this.getCorrectAnswer();
 	}
 
 
