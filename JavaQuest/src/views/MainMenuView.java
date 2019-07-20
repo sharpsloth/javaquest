@@ -3,7 +3,7 @@ package views;
 public class MainMenuView {
 
 	public MainMenuView() {
-		// TODO Auto-generated constructor 
+		// TODO - Auto-generated constructor 
 		public class main {
 
 			public static void main(String[] args) {
