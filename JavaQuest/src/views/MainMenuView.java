@@ -6,4 +6,9 @@ public class MainMenuView {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
