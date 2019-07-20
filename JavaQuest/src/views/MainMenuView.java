@@ -3,12 +3,13 @@ package views;
 public class MainMenuView {
 
 	public MainMenuView() {
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor 
 		public class main {
 
 			public static void main(String[] args) {
 
 
+				
 //				System.out.println("" + "  .--------------------.\r\n" + "  |    Welcome         |\r\n"
 //						+ "  |      To            |        .--.--.\r\n" + "  |        JAVAQUEST   |      .; .;|;. ;.\r\n"
 //						+ "  `-------------.  ,---'     .;_;'   `;_;.\r\n" + "                 \\|         ; ;'       `; ;\r\n"
