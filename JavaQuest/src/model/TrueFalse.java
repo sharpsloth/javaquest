@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class TrueFalse extends Question implements Serializable{
 
-	private ArrayList<String> answerChoices;
 	private boolean correctAnswer;
 	
 	
@@ -19,12 +18,17 @@ public TrueFalse(int chapter, int questionNumber, String questionText, int userA
 	}
 
 public ArrayList<String> getAnswerChoices(){
-	return this.answerChoices;
+	ArrayList<String> answers = new ArrayList<String>();
+	answers.add("false");
+	answers.add("true");
+	return answers;
 }
 
 @Override
 public int getCorrectAnswer() {
-	return this.correctAnswer;
+	if (this.correctAnswer == false) {
+		return 0;
+	}else return 1;
 }
 
 @Override

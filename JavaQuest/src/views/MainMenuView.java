@@ -44,4 +44,9 @@ public class MainMenuView {
 
 	}
 
+	public void display() {
+		
+		
+	}
+
 }

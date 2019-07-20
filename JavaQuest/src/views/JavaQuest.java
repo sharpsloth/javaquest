@@ -5,6 +5,8 @@ import java.io.ObjectInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
+import model.Game;
+
 public class JavaQuest {
 	private static Game game;
 	private static String fileLoaded;
