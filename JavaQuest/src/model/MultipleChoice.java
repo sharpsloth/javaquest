@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 public class MultipleChoice extends Question implements Serializable{
 
-	ArrayList<String> answerChoices = new ArrayList<String>();
+	private ArrayList<String> answerChoices;
 	private int correctAnswer;
 	
 	
 	public MultipleChoice() {
-		this.answerChoices = "";
+		this.answerChoices = new ArrayList<String>();
 		this.correctAnswer = -1;
 	}
 
