@@ -1,9 +1,15 @@
 package views;
 
+/**
+ * ChapterQuizMenu
+ */
 public class ChapterQuizMenu {
 
+	/**
+	 * ChapterQuizMenu
+	 */
 	public ChapterQuizMenu() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 }

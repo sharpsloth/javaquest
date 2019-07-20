@@ -1,18 +1,30 @@
 package views;
 
+/**
+ * MainMenuView
+ */
 public class MainMenuView {
 
+	/**
+	 * MainMenuView
+	 */
 	public MainMenuView() {
 		// TODO - Auto-generated constructor 
 		public class main {
 
+			/**
+			 * main - Jacob's silly idea
+			 */
 			public static void main(String[] args) {
 
 
 				
-//				System.out.println("" + "  .--------------------.\r\n" + "  |    Welcome         |\r\n"
-//						+ "  |      To            |        .--.--.\r\n" + "  |        JAVAQUEST   |      .; .;|;. ;.\r\n"
-//						+ "  `-------------.  ,---'     .;_;'   `;_;.\r\n" + "                 \\|         ; ;'       `; ;\r\n"
+//System.out.println("" + "  .--------------------.\r\n" 
+//						+ "  |    Welcome         |\r\n"
+//						+ "  |      To            |        .--.--.\r\n" 
+//						+ "  |        JAVAQUEST   |      .; .;|;. ;.\r\n"
+//						+ "  `-------------.  ,---'     .;_;'   `;_;.\r\n" 
+//						+ "                 \\|         ; ;'       `; ;\r\n"
 //						+ "                  \\        ;;'.--.___.--.`;;\r\n"
 //						+ "                           ;-(  o )=( o  )-;\r\n"
 //						+ "                          (   `--' | `--'   )\r\n"
@@ -44,6 +56,9 @@ public class MainMenuView {
 
 	}
 
+	/**
+	 * 
+	 */
 	public void display() {
 		
 		

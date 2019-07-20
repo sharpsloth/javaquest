@@ -7,10 +7,16 @@ import java.io.ObjectOutputStream;
 
 import model.Game;
 
+/**
+ * JavaQuest
+ */
 public class JavaQuest {
 	private static Game game;
 	private static String fileLoaded;
 
+	/**
+	 * main
+	 */
 	public static void main(String[] args) {
 		game = null;
 		fileLoaded = "";
@@ -20,14 +26,23 @@ public class JavaQuest {
 		System.out.printf("Game Over.");
 	}
 
+	/**
+	 * setGame(Game thisGame) 
+	 */
 	public static void setGame(Game thisGame) {
 		game = thisGame;
 	}
 
+	/**
+	 * Game getGame()
+	 */
 	public static Game getGame() {
 		return game;
 	}
 
+	/**
+	 * getSavedGame(String filePath)
+	 */
 	public static boolean getSavedGame(String filePath) {
 		game = null;
 		fileLoaded = filePath;
@@ -42,6 +57,10 @@ public class JavaQuest {
 		return false;
 		}return true;
 }
+
+	/**
+	 * saveGame(String filePath)
+	 */
 	public static boolean saveGame(String filePath) {
 		if (game.getName().isBlank())
 			game.setName(filePath);
@@ -57,6 +76,10 @@ public class JavaQuest {
 		}
 		return false;
 	}
+	
+	/**
+	 * getCurrentFileLoaded()
+	 */
 	public static String getCurrentFileLoaded() {
 		return fileLoaded;
 	}
