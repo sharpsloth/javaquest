@@ -1,9 +1,15 @@
 package views;
 
+/**
+ * GamePlayMenu
+ */
 public class GamePlayMenu {
 
+	/**
+	 * GamePlayMenu()
+	 */
 	public GamePlayMenu() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 }
