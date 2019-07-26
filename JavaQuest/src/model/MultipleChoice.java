@@ -10,6 +10,7 @@ public class MultipleChoice extends Question implements Serializable{
 
 	private ArrayList<String> answerChoices;
 	private int correctAnswer;
+	private int maxAnswers;
 	
 
 	/**
@@ -19,6 +20,7 @@ public class MultipleChoice extends Question implements Serializable{
 	public MultipleChoice() {
 		this.answerChoices = new ArrayList<String>();
 		this.correctAnswer = -1;
+		this.maxAnswers = 4;
 	}
 
 	/**
@@ -35,6 +37,7 @@ public MultipleChoice(int chapter, int questionNumber, String questionText, int 
 	super(chapter, questionNumber, questionText, userAnswer, wasUserAnswerCorrect);
 	this.answerChoices = answerChoices;
 	this.correctAnswer = correctAnswer;		
+	this.maxAnswers = 4;
 	}
 
 /**

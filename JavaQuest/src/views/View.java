@@ -1,6 +1,6 @@
 package views;
 
-import java.util.Scanner;
+import java.util.*;
 
 
 public abstract class View implements ViewInterface {
@@ -64,5 +64,40 @@ public abstract class View implements ViewInterface {
 	        	System.out.printf(this.getClass().getName(),"Error reading input: " + e.getMessage());
 	        }
 	        return value; //return the value entered
+	    }
+	    
+	    public Integer getInt (String message) {
+	    	try {
+	    		System.out.print(message);
+	    		String teString = getInput();
+	    		Integer test2 = Integer.parseInt(teString);
+	    		return test2;
+	    	}
+	    	catch (Exception ex) {
+	    		System.out.println("Invalid value. Error: " +ex.getMessage());
+	    	}
+	    	return -1;
+	    }
+	    
+	    public boolean getBoolean(String response) {
+	    	boolean b = Boolean.parseBoolean(response);
+	    	
+	    	return b;
+	    	
+	    }
+	    
+	    public ArrayList<String> getArray (String message, int maxAnswers) {
+	    	try {
+	    		System.out.print(message);
+	    		ArrayList<String> teString = new ArrayList<String>();
+	    		for (int i = 0; i < maxAnswers; i++) {
+	    		teString.add(getInput("Enter a question answer choice"));
+	    		}
+	    		return teString;
+	    	}
+	    	catch (Exception ex) {
+	    		System.out.println("Invalid value. Error: " +ex.getMessage());
+	    	}
+			return null;
 	    }
 }
