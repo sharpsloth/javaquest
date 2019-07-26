@@ -1,9 +1,12 @@
 package model;
+
+import java.io.Serializable;
+
 /**
  * Chapter
  * Shows/uses the chapter information
  */
-public class Chapter {
+public class Chapter implements Serializable{
 	private String chapterName;
 	private int chapterNumber;
 
