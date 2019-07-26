@@ -5,6 +5,8 @@ import java.io.ObjectInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
+import java.util.*;
+
 import model.Game;
 
 /**
@@ -49,7 +51,7 @@ public class JavaQuest {
 		try(FileInputStream fips = new FileInputStream(filePath)) {
 			ObjectInputStream input = new ObjectInputStream(fips);
 			
-			game = (Game) input.defaultReadObject(); //read the game object on file
+			game = (Game) input.readObject(); //read the game object on file
 			System.out.printf("Successfully loaded the game");
 		}
 	catch(Exception e)	{

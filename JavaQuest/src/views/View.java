@@ -2,9 +2,11 @@ package views;
 
 import java.util.Scanner;
 
+
 public abstract class View implements ViewInterface {
 	    protected String displayMessage;
 	    private Scanner input;
+	    
 	    
 	    public View() {
 	    }
@@ -42,12 +44,12 @@ public abstract class View implements ViewInterface {
 	 
 	    @Override
 	    public String getInput() {
+	    	input = new Scanner(System.in);
 	        String value = ""; //value to be returned
 	        boolean valid = false; //initialize to not valid
 	        try {
 	        while (!valid) { //loop while an invalid value is entered
-	            
-	            
+	                       
 	            
 	            value = input.nextLine(); //get next line typed on keyboard
 	            value = value.trim(); //trim off leading and trailing blanks

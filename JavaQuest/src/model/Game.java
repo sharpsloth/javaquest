@@ -15,7 +15,7 @@ public class Game implements Serializable{
 	 */
 	public Game() {
 		this.name = "";
-		this.quesitons = newArrayList<Question>();
+		this.questions = new ArrayList<Question>();
 	}
 
 	/**
@@ -23,7 +23,7 @@ public class Game implements Serializable{
 	 */
 	public Game(String name) {
 		this.name = name;
-		this.quesitons = newArrayList<Question>();
+		this.questions = new ArrayList<Question>();
 	}
 
 	/**
