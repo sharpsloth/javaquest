@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * abstract class Question implements Serializable
@@ -10,7 +11,7 @@ public abstract class Question implements Serializable {
 	private int chapter;
 	private int questionNumber;
 	private String questionText;
-	private int userAnswer; //-1 not answered	
+	protected int userAnswer; //-1 not answered	
 	private int wasUserAnswerCorrect; // -1 not answered, 0 wrong, 1 correct
 
 	/**
@@ -50,6 +51,9 @@ public abstract class Question implements Serializable {
 		return this.chapter;
 	}
 
+	public String getQuestionType() {
+		return "Q";
+	}
 	/**
 	 * getQuestionNumber()
 	 */
@@ -112,6 +116,8 @@ public abstract class Question implements Serializable {
 	public String correctAnswer() {
 		return "Correct answer is: " + this.getCorrectAnswer();
 	}
+
+	public abstract ArrayList<String> getAnswerChoices();
 
 
 }

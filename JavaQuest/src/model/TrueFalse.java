@@ -42,6 +42,11 @@ public TrueFalse(int chapter, int questionNumber, String questionText, int userA
 	this.correctAnswer = correctAnswer;	
 	}
 
+@Override
+public String getQuestionType() {
+	return "TF";
+}
+
 /**
  * ArrayList<String> getAnswerChoices()
  */

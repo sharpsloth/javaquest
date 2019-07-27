@@ -50,6 +50,18 @@ public class Game implements Serializable{
 		return this.questions;
 	}
 	
+	/*public ArrayList<Question> getQuestions(int chapter) {
+		for (int i=0; i < this.questions.size(); i++) {
+			 c = this.questions(i);
+			c.getChapter();
+			
+			if (c == chapter) {
+				
+			}
+		}
+		return this.questions;
+	}*/
+	
 	public void addQuestion(Question question) {
 		this.questions.add(question);
 	}

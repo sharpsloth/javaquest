@@ -66,7 +66,7 @@ public abstract class View implements ViewInterface {
 	        return value; //return the value entered
 	    }
 	    
-	    public Integer getInt (String message) {
+	    public Integer getInt(String message) {
 	    	try {
 	    		System.out.print(message);
 	    		String teString = getInput();
