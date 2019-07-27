@@ -75,13 +75,13 @@ displayMessage = getGamePlayMenuString();
 * AddTFQuestion() user added true false questions
 */
 private void AddTFQuestion() {
-System.out.printf("You selected Add True/False Question");
-int chapter = getInt("Enter the chapter number");
-int questionNumber = getInt("Enter the question number");
-String questionText = getInput("Enter the question text");
+System.out.printf("You selected Add True/False Question ");
+int chapter = getInt("\nEnter the chapter number ");
+int questionNumber = getInt("Enter the question numbe r");
+String questionText = getInput("Enter the question text ");
 int userAnswer = -1;
 int wasUserAnswerCorrect = -1;
-boolean correctAnswer = getBoolean("Is the answer true or false?");
+boolean correctAnswer = getBoolean("Is the answer true or false? ");
 Question question = new TrueFalse(chapter, questionNumber, questionText, userAnswer, wasUserAnswerCorrect,
 correctAnswer);
 Game game = JavaQuest.getGame();
@@ -93,15 +93,15 @@ questions.add(question);
 * AddMCQuestion() user added multiple choice questions
 */
 private void AddMCQuestion() {
-System.out.printf("You selected Add Multiple Choice Question");
-int chapter = getInt("Enter the chapter number");
-int questionNumber = getInt("Enter the question number");
-String questionText = getInput("Enter the question text");
+System.out.printf("You selected Add Multiple Choice Question ");
+int chapter = getInt("\nEnter the chapter number ");
+int questionNumber = getInt("\nEnter the question number ");
+String questionText = getInput("\nEnter the question text ");
 int userAnswer = -1;
 int wasUserAnswerCorrect = -1;
-int maxAnswers = getInt("How many answer choices does this question have?");
-ArrayList<String> answerChoices = getArray("Enter an answer choice", maxAnswers);
-int correctAnswer = getInt("Which answer is correct? (0/1/2/etc)");
+int maxAnswers = getInt("\nHow many answer choices does this question have? ");
+ArrayList<String> answerChoices = getArray("\nEnter an answer choice ", maxAnswers);
+int correctAnswer = getInt("\nWhich answer is correct? \nEnter 0 for the first answer\n1 for the second\n2 for the third\nect.\r\n");
 Question question = new MultipleChoice(chapter, questionNumber, questionText, userAnswer, wasUserAnswerCorrect,
 answerChoices, correctAnswer);
 Game game = JavaQuest.getGame();
@@ -133,7 +133,7 @@ gamePlayMenuView.display();
 */
 private static String getContinueMenuString() {
 if (JavaQuest.getGame() != null) {
-return "\nR - Return to current game: ";
+return "\nR - Return to current game ";
 } else
 return "";
 }// end getContinueMenuString

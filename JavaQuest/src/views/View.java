@@ -37,7 +37,7 @@ public abstract class View implements ViewInterface {
 	    
 	    @Override
 	    public String getInput(String prompt) {
-	    	System.out.println("/n" + prompt);
+	    	System.out.println("\n" + prompt);
 	    	String value = this.getInput();
 	    	return value;
 	    }
@@ -45,13 +45,14 @@ public abstract class View implements ViewInterface {
 	    @Override
 	    public String getInput() {
 	    	input = new Scanner(System.in);
+	    	input.useDelimiter(System.lineSeparator());
 	        String value = ""; //value to be returned
 	        boolean valid = false; //initialize to not valid
 	        try {
 	        while (!valid) { //loop while an invalid value is entered
 	                       
 	            
-	            value = input.nextLine(); //get next line typed on keyboard
+	            value = input.next(); //get next line typed on keyboard
 	            value = value.trim(); //trim off leading and trailing blanks
 	            
 	            if (value.length() < 1) { //value is blank
@@ -79,19 +80,25 @@ public abstract class View implements ViewInterface {
 	    	return -1;
 	    }
 	    
-	    public boolean getBoolean(String response) {
-	    	boolean b = Boolean.parseBoolean(response);
-	    	
-	    	return b;
-	    	
+	    public boolean getBoolean(String message) {
+	    	try {
+	    		System.out.print(message);
+	    		String teString = getInput();
+	    		boolean b = Boolean.parseBoolean(teString);		    	
+		    	return b;
+	    	}
+	    	catch (Exception ex) {
+	    		System.out.println("Invalid value. Error: " +ex.getMessage());
+	    	}
+	    	return false;
 	    }
+	    
 	    
 	    public ArrayList<String> getArray (String message, int maxAnswers) {
 	    	try {
-	    		System.out.print(message);
 	    		ArrayList<String> teString = new ArrayList<String>();
 	    		for (int i = 0; i < maxAnswers; i++) {
-	    		teString.add(getInput("Enter a question answer choice"));
+	    		teString.add(getInput(message));
 	    		}
 	    		return teString;
 	    	}
