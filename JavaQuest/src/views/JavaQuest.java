@@ -68,7 +68,7 @@ public class JavaQuest {
 			game.setName(filePath);
 		try(FileOutputStream fops = new FileOutputStream(filePath)) {
 		ObjectOutputStream output = new ObjectOutputStream(fops);
-		output.writeObject(game); //write the game object out to file
+		output.writeObject(game); //write the game object out to filen
 		System.out.printf("Sucessfully saved the game");
 		game.hasChanged(false);
 		return true;

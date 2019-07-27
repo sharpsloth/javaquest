@@ -1,5 +1,6 @@
 package model;
 import java.io.Serializable;
+import views.*;
 import java.util.*;
 
 /**
@@ -47,6 +48,10 @@ public class Game implements Serializable{
 	 */
 	public ArrayList<Question> getQuestions() {
 		return this.questions;
+	}
+	
+	public void addQuestion(Question question) {
+		this.questions.add(question);
 	}
 
 	/**
